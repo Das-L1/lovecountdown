@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.countdown {
+    display: flex;
+    gap: 20px;
+}
+
+.countdown-item {
+    text-align: center;
+}
+
+.countdown-value {
+    font-size: 4em;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+}
+
+.countdown-label {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/* Flap display style */
+.countdown-value::before, .countdown-value::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: #444;
+    z-index: -1;
+}
+
+.countdown-value::before {
+    top: 0;
+    border-bottom: 1px solid #333;
+}
+
+.countdown-value::after {
+    bottom: 0;
+    border-top: 1px solid #333;
+}
